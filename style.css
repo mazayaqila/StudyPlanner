@@ -1,0 +1,80 @@
+:root {
+  --primary: #221829;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  background-color: var(--primary);
+}
+
+.navbar {
+  background-color: rgba(113, 30, 190, 0.562);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 7%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar-logo {
+  color: white;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.navbar-logo span {
+  color: wheat;
+}
+
+.navbar-nav {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.navbar-nav a {
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+#hamburger-menu {
+  color: white;
+  font-size: 1.5rem;
+  display: none;
+}
+
+/* Media */
+@media (max-width: 768px) {
+  .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #1a8294;
+    flex-direction: column;
+    width: 200px;
+    padding: 1rem;
+    transition: right 0.3s ease-in-out;
+  }
+  .navbar-nav.active {
+    right: 0;
+  }
+  #hamburger-menu {
+    display: block;
+  }
+}
