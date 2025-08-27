@@ -1,7 +1,14 @@
-const hamburger = document.getElementById("hamburger-menu");
-const navbarNav = document.getElementById("navbarNav");
+const navbarNav = document.querySelector(".navbar-nav");
+const hamburger = document.querySelector("#hamburger-menu");
 
-hamburger.addEventListener("click", (e) => {
-  e.preventDefault();
+//Hamburger di klik
+hamburger.onclick = () => {
   navbarNav.classList.toggle("active");
+};
+
+//klik luar sidebar buat ngilangin nav
+document.addEventListener("click", function (e) {
+  if (!hamburger.contains(e.target) && !navbarNav.contains(e.target)) {
+    navbarNav.classList.remove("active");
+  }
 });
