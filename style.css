@@ -142,6 +142,24 @@ body {
   font-size: 20px;
 }
 
+#startbtn {
+  text-decoration: none;
+  background-color: #420c74;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+  font-size: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#startbtn:hover {
+  background-color: #5f1f9b;
+  text-decoration: none;
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
 /* Content Section */
 
 .content {
