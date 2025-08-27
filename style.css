@@ -4,20 +4,28 @@
   padding: 0;
   scroll-behavior: smooth;
   scroll-margin-top: 70px;
+  scroll-behavior: smooth;
+  scroll-margin-top: 70px;
 }
 
 body {
   background-color: #221829;
+  background-color: #221829;
 }
+
+/* Navbar */
 
 /* Navbar */
 
 .navbar {
   background-color: #340a5c;
   width: 100;
+  background-color: #340a5c;
+  width: 100;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 15px 40px;
   padding: 15px 40px;
   position: fixed;
   top: 0;
@@ -30,6 +38,7 @@ body {
   font-style: italic;
   font-weight: bold;
   font-size: 1.5rem;
+  text-decoration: none;
   text-decoration: none;
 }
 
@@ -71,10 +80,36 @@ body {
 .navbar-nav a:hover::after {
   transform: scaleX(1);
   width: 100%;
+  font-weight: 600;
+  font-size: 17px;
+  text-decoration: none;
+  transition: color 0.3 ease;
+}
+
+.navbar-nav a:hover {
+  color: wheat;
+  text-decoration: none;
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+.navbar-nav a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: #f5deb3a8;
+  transition: transform 0.3s ease, width 0.3s ease;
+}
+
+.navbar-nav a:hover::after {
+  transform: scaleX(1);
+  width: 100%;
 }
 
 #hamburger-menu {
   color: white;
+  font-size: 24px;
   font-size: 24px;
   display: none;
   cursor: pointer;
@@ -129,6 +164,11 @@ body {
     width: 100%;
   }
 
+  body {
+    font-size: 10px;
+    width: 100%;
+  }
+
   .navbar-nav {
     position: absolute;
     top: 100%;
@@ -138,7 +178,28 @@ body {
     opacity: 0.9;
     width: 200px;
     height: 30vh;
+    background-color: #340a5c;
+    border-radius: 0 0 0 20px;
+    opacity: 0.9;
+    width: 150px;
+    height: 30vh;
     flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    transition: 0.3s ease;
+  }
+
+  .navbar-nav a {
+    display: block;
+    margin: 0;
+  }
+
+  .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+
+  .navbar-nav a:hover::after {
+    transform: scaleX(1);
     text-align: center;
     padding: 20px;
     transition: 0.3s ease;
@@ -163,6 +224,7 @@ body {
 
   #hamburger-menu {
     display: block;
+    cursor: pointer;
     cursor: pointer;
   }
 }
