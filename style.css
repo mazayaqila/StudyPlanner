@@ -131,7 +131,7 @@ body {
 .hero {
   height: 60vh;
   background: linear-gradient(to bottom, #00000000, #221829),
-    url("./bghero.jpg");
+    url("./homebg.jpg");
   background-size: cover;
   display: flex;
   flex-direction: column;
